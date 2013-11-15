@@ -1,0 +1,30 @@
+Ted's Vim Setup
+===============
+
+Installing
+----------
+
+1. Clone this repository into either ~/.vim or some other directory
+
+2. If you cloned this repository into something other than ~/.vim then make a symlink from ~/.vim to your new clone
+
+3. Create a symlink from ~/.vimrc to the vimrc file in this repository
+
+4. To initialize the submodules the first time, run:
+
+    git submodule init
+
+5. To update the submodules, run:
+
+    git submodule update
+
+That's it!
+
+Useful gitconfig stanza
+-----------------------
+
+[alias]
+  lo = log --graph --decorate --pretty=oneline --abbrev-commit
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --branches --not --remotes
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --branches
+  lolaa = log --graph --decorate --pretty=oneline --abbrev-commit --all

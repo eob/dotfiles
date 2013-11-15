@@ -1,0 +1,115 @@
+set nocompatible
+
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set autoindent
+set number
+set hidden
+set ignorecase
+set expandtab
+set smartindent
+set laststatus=2
+set nocompatible "Not vi compativle (Vim is king)
+
+" ==== Sub by powerline
+"set statusline=
+"set statusline+=%-3.3n\                      " buffer number
+"set statusline+=%f\                          " filename
+"set statusline+=%h%m%r%w                     " status flags
+"set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
+"set statusline+=\ %{fugitive#statusline()}     " fugitive
+"set statusline+=%=                           " right align remainder
+"set statusline+=0x%-8B                       " character value
+"set statusline+=%-14(%l,%c%V%)               " line, character
+"set statusline+=%<%P                         " file position
+
+call pathogen#infect()
+call pathogen#helptags()
+
+" NO SWAP OR BACKUP
+set nobackup
+set noswapfile
+
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256
+endif
+
+:let mapleader = ","
+
+:nmap <leader>e :NERDTreeToggle<CR>
+
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+endif
+
+""""""""""""""""""""""""""""""""""
+" Syntax and indent
+""""""""""""""""""""""""""""""""""
+syntax on " Turn on syntax highligthing
+set showmatch  "Show matching bracets when text indicator is over them
+
+" Switch on filetype detection and loads 
+" indent file (indent.vim) for specific file types
+filetype indent on
+filetype on
+set autoindent " Copy indent from the row above
+set si " Smart indent
+
+""""""""""""""""""""""""""""""""""
+" Some other confy settings
+""""""""""""""""""""""""""""""""""
+" set nu " Number lines
+set hls " highlight search
+set lbr " linebreak
+
+" Use 2 space instead of tab during format
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+
+""""""""""""""""""""""""""""""""
+" Search Behavior
+""""""""""""""""""""""""""""""""
+:set incsearch
+:set ignorecase
+:set smartcase
+:set hlsearch
+:nmap \q :nohlsearch<CR>
+
+
+""""""""""""""""""""""""""""""""
+" Control P
+""""""""""""""""""""""""""""""""
+" Make ; do a fancy buffer switch
+:nmap ; :CtrlPBuffer<CR>
+
+:let g:ctrlp_map = '<Leader>t'
+:let g:ctrlp_match_window_bottom = 0
+:let g:ctrlp_match_window_reversed = 0
+:let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+:let g:ctrlp_working_path_mode = 0
+:let g:ctrlp_dotfiles = 0
+:let g:ctrlp_switch_buffer = 0
+
+
+""""""""""""""""""""""""""""""""
+" Powerline
+""""""""""""""""""""""""""""""""
+set rtp+=/Users/eob/.vim/bundle/powerline/powerline/bindings/vim
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+
+let &t_Co=256

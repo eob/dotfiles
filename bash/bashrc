@@ -1,0 +1,6 @@
+export EDITOR="vim"
+
+source ~/.profile
+
+alias tma='tmux attach -d -t'
+

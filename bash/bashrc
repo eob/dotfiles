@@ -4,3 +4,7 @@ source ~/.profile
 
 alias tma='tmux attach -d -t'
 
+[ -n "$TMUX" ] && export TERM=screen-256color
+
+alias tmux="TERM=screen-256color-bce tmux"
+

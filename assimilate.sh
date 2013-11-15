@@ -1,5 +1,11 @@
 #!/bin/bash
 
+RDIR="$( dirname "$SOURCE" )"
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+if [ "$DIR" != "$RDIR" ]; then
+  echo "DIR '$RDIR' resolves to '$DIR'"
+fi
+
 # If file exists
 if [ -a ~/.vimrc ]
 then
@@ -7,7 +13,7 @@ then
   exit
 else
   echo "Making .vimrc symlink..."
-  ln -s vim/.vimrc ~/.vimrc
+  ln -s $DIR/vim/vimrc ~/.vimrc
 fi
 
 # If file exists
@@ -17,7 +23,7 @@ then
   exit
 else
   echo "Making .vim symlink..."
-  ln -s vim ~/.vim
+  ln -s $DIR/vim ~/.vim
 fi
 
 # If file exists
@@ -27,7 +33,7 @@ then
   exit
 else
   echo "Making .tmux.conf symlink..."
-  ln -s tmux/tmux.conf ~/.tmux.conf
+  ln -s $DIR/tmux/tmux.conf ~/.tmux.conf
 fi
 
 # If file exists
@@ -37,7 +43,7 @@ then
   exit
 else
   echo "Making .bashrc symlink..."
-  ln -s bash/bashrc ~/.bashrc
+  ln -s $DIR/bash/bashrc ~/.bashrc
 fi
 
 echo "Updating git submodules"

@@ -8,8 +8,45 @@ Within a Session
 ================
 Switch     tmux switch -t session_name
 Detach     tmux detach
+           ^b d
 
-Shortcuts
+Windows
+=======
+List       ^b w
+New        tmux new-window
+           ^b c
+Select     tmux select-window -t :0-9
+           ^b [0-9]
+Rename     tmux rename-window
+           ^b ,
+
+Panes
+=====
+V Split    tmux split-window
+           ^b "
+
+H Split    tmux split-window -h
+           ^b %
+
+Swap       tmux swap-pane -[UDLR]
+           ^b { or }
+
+Select     tmux select-pane -[ULDR]
+Select     tmux select-pane -t :.+ (selects in numerical order)
+
+Helpful
+=======
+
+List Keys  tmux list-keys
+List Cmds  tmux list-commands
+Info       tmux info
+Reload     tmux source-file <tmux conf>
+
+Useful:
+
+http://robots.thoughtbot.com/a-tmux-crash-course
+
+D
 =========
 
 Prefix Key:      ctrl-b

@@ -1,0 +1,6 @@
+[Local ] To add a tag:       git tag TAGNAME -m "Message"
+[Remote] To add a tag:       git push origin --tags
+
+[Local ] To delete a tag:    git tag -d TAGNAME
+[Remote] To delete a tag:    git push origin :refs/tags/TAGNAME
+

@@ -28,3 +28,10 @@ Useful gitconfig stanza
   lol = log --graph --decorate --pretty=oneline --abbrev-commit --branches --not --remotes
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --branches
   lolaa = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  
+Useful Commands
+---------------
+
+:ls   -- list buffers
+:b#   -- switch to buffer
+:bd   -- delete buffer

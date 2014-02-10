@@ -8,3 +8,4 @@ alias tma='tmux attach -d -t'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
+export PATH=$PATH:~/.dotfiles/bin

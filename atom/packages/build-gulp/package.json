@@ -1,0 +1,63 @@
+{
+  "name": "build-gulp",
+  "version": "0.2.0",
+  "description": "Runs gulp targets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noseglid/atom-build-gulp"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": "^1.0.0"
+  },
+  "providedServices": {
+    "builder": {
+      "description": "Runs gulp targets",
+      "versions": {
+        "1.0.0": "provideBuilder"
+      }
+    }
+  },
+  "devDependencies": {
+    "temp": "^0.8.3",
+    "fs-extra": "^0.23.1",
+    "atom-build-spec-helpers": "^0.1.0",
+    "jshint": "^2.5.11",
+    "jscs": "^1.9.0"
+  },
+  "scripts": {
+    "test": "jscs lib/*.js spec/*-spec.js && jshint lib/*.js spec/*-spec.js"
+  },
+  "keywords": [
+    "build",
+    "compile",
+    "gulp",
+    "javascript",
+    "productivity"
+  ],
+  "main": "lib/gulp.js",
+  "readme": "# Gulp runner for Atom\n[![Build Status](https://travis-ci.org/noseglid/atom-build-gulp.svg)](https://travis-ci.org/noseglid/atom-build-gulp)\n[![Gitter chat](https://badges.gitter.im/noseglid/atom-build.svg)](https://gitter.im/noseglid/atom-build)\n\nUses the [atom-build](https://github.com/noseglid/atom-build) package to execute\ngulp builds in the `Atom` editor.\n\nThis package requires [atom-build](https://github.com/noseglid/atom-build) to be installed.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/noseglid/atom-build-gulp/issues"
+  },
+  "homepage": "https://github.com/noseglid/atom-build-gulp",
+  "_id": "build-gulp@0.2.0",
+  "_shasum": "ba994ef0cdce4d985d241a38b722dd2662b2b194",
+  "_resolved": "file:../d-115822-23792-ulnw25/package.tgz",
+  "_from": "../d-115822-23792-ulnw25/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        "lib/gulp.js",
+        "lib/parser-task.js"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

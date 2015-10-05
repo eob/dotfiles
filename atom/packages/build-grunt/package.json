@@ -1,0 +1,63 @@
+{
+  "name": "build-grunt",
+  "version": "0.2.0",
+  "description": "Runs grunt targets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noseglid/atom-build-grunt"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": "^1.0.0"
+  },
+  "providedServices": {
+    "builder": {
+      "description": "Runs Grunt targets",
+      "versions": {
+        "1.0.0": "provideBuilder"
+      }
+    }
+  },
+  "devDependencies": {
+    "temp": "^0.8.3",
+    "fs-extra": "^0.23.1",
+    "atom-build-spec-helpers": "^0.1.0",
+    "jshint": "^2.5.11",
+    "jscs": "^1.9.0"
+  },
+  "scripts": {
+    "test": "jscs lib/*.js spec/*-spec.js && jshint lib/*.js spec/*-spec.js"
+  },
+  "keywords": [
+    "build",
+    "compile",
+    "Grunt",
+    "javascript",
+    "productivity"
+  ],
+  "main": "lib/Grunt.js",
+  "readme": "# Grunt runner for Atom\n[![Build Status](https://travis-ci.org/noseglid/atom-build-grunt.svg)](https://travis-ci.org/noseglid/atom-build-grunt)\n[![Gitter chat](https://badges.gitter.im/noseglid/atom-build.svg)](https://gitter.im/noseglid/atom-build)\n\nUses the [atom-build](https://github.com/noseglid/atom-build) package to execute\nGrunt builds in the `Atom` editor.\n\nThis package requires [atom-build](https://github.com/noseglid/atom-build) to be installed.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/noseglid/atom-build-grunt/issues"
+  },
+  "homepage": "https://github.com/noseglid/atom-build-grunt",
+  "_id": "build-grunt@0.2.0",
+  "_shasum": "8500171e560a71b97704464b28b1ba206e2ffb6e",
+  "_resolved": "file:../d-115822-23800-o8bpel/package.tgz",
+  "_from": "../d-115822-23800-o8bpel/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        "lib/Grunt.js",
+        "lib/parser-task.js"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

@@ -1,0 +1,18 @@
+"*":
+  "exception-reporting":
+    userId: "0abd6a41-70e2-6a57-9a70-1961982b2b75"
+  welcome:
+    showOnStartup: false
+  editor:
+    invisibles: {}
+  core:
+    themes: [
+      "atom-material-ui"
+      "atom-dark-syntax"
+    ]
+  "atom-material-ui":
+    compactTreeView: true
+    panelContrast: true
+  "linter-gjslint": {}
+  linter: {}
+  "vim-mode": {}

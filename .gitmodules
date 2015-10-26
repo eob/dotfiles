@@ -28,3 +28,6 @@
 [submodule "vim/bundle/bufsurf"]
 	path = vim/bundle/bufsurf
 	url = https://github.com/ton/vim-bufsurf.git
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git

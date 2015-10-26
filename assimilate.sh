@@ -25,27 +25,6 @@ else
   echo "Making .vim symlink..."
   ln -s $DIR/vim ~/.vim
 fi
-
-# If file exists
-if [ -a ~/.tmux.conf ]
-then
-  echo "~/.tmux.conf already exists. Please remove."
-  exit
-else
-  echo "Making .tmux.conf symlink..."
-  ln -s $DIR/tmux/tmux.conf ~/.tmux.conf
-fi
-
-# If file exists
-if [ -a ~/.bashrc ]
-then
-  echo "~/.bashrc already exists. Please remove."
-  exit
-else
-  echo "Making .bashrc symlink..."
-  ln -s $DIR/bash/bashrc ~/.bashrc
-fi
-
 echo "Updating git submodules"
 git submodule init
 git submodule update

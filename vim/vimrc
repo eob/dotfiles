@@ -113,3 +113,4 @@ set rtp+=/Users/eob/.vim/bundle/powerline/powerline/bindings/vim
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 
 let &t_Co=256
+set mouse=a
